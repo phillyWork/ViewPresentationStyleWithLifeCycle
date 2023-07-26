@@ -1,24 +1,1085 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FaR-Rc-ZVi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeOfNavBarPresentation-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NavHomeViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WEi-0Q-lqH">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="L2A-BZ-nY5">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="222"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gM3-X8-jhH">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="222"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Automatic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtp-tZ-b6M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS5-s4-5rY">
+                                                        <rect key="frame" x="0.0" y="37" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="Cqa-G1-6nZ" kind="show" id="KCw-rt-9Dp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axl-eF-Jwp">
+                                                        <rect key="frame" x="0.0" y="74" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="Cqa-G1-6nZ" kind="showDetail" id="IaM-Lv-NgZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wW-Fw-kLu">
+                                                        <rect key="frame" x="0.0" y="111" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="Cqa-G1-6nZ" kind="presentation" id="7I7-hk-2YR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEv-Xv-KYF">
+                                                        <rect key="frame" x="0.0" y="148" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="Cqa-G1-6nZ" kind="presentation" modalPresentationStyle="fullScreen" id="2sf-oq-gAE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mel-Xo-W8Q">
+                                                        <rect key="frame" x="0.0" y="185" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="Cqa-G1-6nZ" kind="presentation" modalPresentationStyle="currentContext" id="T3s-GX-Wji"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kjv-Qz-j5a">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="222"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To OverFullScreen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVe-cr-xPf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGe-6n-Ucl">
+                                                        <rect key="frame" x="0.0" y="37" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="dGD-Zc-jFs" kind="show" id="Wa3-LV-JBQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-ZD-QbE">
+                                                        <rect key="frame" x="0.0" y="74" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="dGD-Zc-jFs" kind="showDetail" id="jfv-iX-CGy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNJ-PE-GSG">
+                                                        <rect key="frame" x="0.0" y="111" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="dGD-Zc-jFs" kind="presentation" id="Nm0-OU-vGA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJb-pf-wyL">
+                                                        <rect key="frame" x="0.0" y="148" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="dGD-Zc-jFs" kind="presentation" modalPresentationStyle="fullScreen" id="hmo-o7-XID"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kd-h2-AYT">
+                                                        <rect key="frame" x="0.0" y="185" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="dGD-Zc-jFs" kind="presentation" modalPresentationStyle="currentContext" id="aMb-1y-INy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VWP-OQ-i6m">
+                                        <rect key="frame" x="0.0" y="222" width="393" height="222"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cg2-8C-d2u">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="222"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To OverCurrentContext" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0b-OV-sS4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbj-6X-D5d">
+                                                        <rect key="frame" x="0.0" y="37" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="Bfa-1E-EQI" kind="show" id="N9l-JO-8jD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbG-Tj-QHl">
+                                                        <rect key="frame" x="0.0" y="74" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="Bfa-1E-EQI" kind="showDetail" id="QAG-aB-QZP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTQ-Qp-Rgx">
+                                                        <rect key="frame" x="0.0" y="111" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="Bfa-1E-EQI" kind="presentation" id="hhA-mI-dgi"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkg-mn-3qz">
+                                                        <rect key="frame" x="0.0" y="148" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="Bfa-1E-EQI" kind="presentation" modalPresentationStyle="fullScreen" id="eo2-R3-c8o"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg9-8L-lAf">
+                                                        <rect key="frame" x="0.0" y="185" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="Bfa-1E-EQI" kind="presentation" modalPresentationStyle="currentContext" id="kIH-ko-tbj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IPP-QL-4WU">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="222"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Extra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L32-1i-zxq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMC-hn-p7o">
+                                                        <rect key="frame" x="0.0" y="37" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-GP-JAm">
+                                                        <rect key="frame" x="0.0" y="74" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-U2-mBf">
+                                                        <rect key="frame" x="0.0" y="111" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXj-TZ-44l">
+                                                        <rect key="frame" x="0.0" y="148" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84I-R3-fUC">
+                                                        <rect key="frame" x="0.0" y="185" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cqi-FW-GXQ">
+                                        <rect key="frame" x="0.0" y="444" width="393" height="222"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eDj-Fv-We0">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="222"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To PageSheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMv-xZ-a2M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ss7-tV-dwz">
+                                                        <rect key="frame" x="0.0" y="37" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="bKH-Cz-mgQ" kind="show" id="Mae-S0-KJE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6K-Op-oQu">
+                                                        <rect key="frame" x="0.0" y="74" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="bKH-Cz-mgQ" kind="showDetail" id="SkZ-76-TZB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auc-RS-Uwm">
+                                                        <rect key="frame" x="0.0" y="111" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="bKH-Cz-mgQ" kind="presentation" id="p2N-bo-BpB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqg-3R-wK8">
+                                                        <rect key="frame" x="0.0" y="148" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="bKH-Cz-mgQ" kind="presentation" modalPresentationStyle="fullScreen" id="qty-Zy-Y8E"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFA-Gs-JxA">
+                                                        <rect key="frame" x="0.0" y="185" width="196.66666666666666" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="bKH-Cz-mgQ" kind="presentation" modalPresentationStyle="currentContext" id="Kuq-VV-w21"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="L4N-Fb-gon">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="222"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To FormSheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pu2-hV-dC4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="052-w8-3VR">
+                                                        <rect key="frame" x="0.0" y="37" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="HaC-y0-Tmx" kind="show" id="Dje-cc-ubE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dd-vh-ent">
+                                                        <rect key="frame" x="0.0" y="74" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="HaC-y0-Tmx" kind="showDetail" id="gRk-Xi-dYj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5x-xq-PIc">
+                                                        <rect key="frame" x="0.0" y="111" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="HaC-y0-Tmx" kind="presentation" id="q4q-iA-ona"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9j-RQ-Bde">
+                                                        <rect key="frame" x="0.0" y="148" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="HaC-y0-Tmx" kind="presentation" modalPresentationStyle="fullScreen" id="nUY-eT-6Qg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmc-B2-wEF">
+                                                        <rect key="frame" x="0.0" y="185" width="196.33333333333334" height="37"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="HaC-y0-Tmx" kind="presentation" modalPresentationStyle="currentContext" id="kxu-Wg-FOf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="WEi-0Q-lqH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="adY-z3-c9L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WEi-0Q-lqH" secondAttribute="trailing" id="etd-L4-gjT"/>
+                            <constraint firstItem="WEi-0Q-lqH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mDa-rQ-iW2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WEi-0Q-lqH" secondAttribute="bottom" id="yqy-G2-wEv"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="HomeOfNavBarPresentation" id="PhN-Ov-trf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2344.2748091603053" y="-680.28169014084506"/>
+        </scene>
+        <!--Nav Automatic View Controller-->
+        <scene sceneID="fK6-52-L8e">
+            <objects>
+                <viewController id="Cqa-G1-6nZ" customClass="NavAutomaticViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZAX-ML-8q9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-DN-mf9">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="qb9-q5-IRA" kind="unwind" unwindAction="unwindFromNavAutoToNavHome:" id="Pvt-qW-FHZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YRh-6d-8ad"/>
+                        <color key="backgroundColor" red="1" green="0.93725147377066775" blue="0.62964871832489555" alpha="0.40434998111782477" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2H7-Sw-1mB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djx-1O-Flt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qb9-q5-IRA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3549" y="-1425"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ITK-8o-zPh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FaR-Rc-ZVi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ueh-Qj-jPC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="enr-IJ-G1x" kind="relationship" relationship="viewControllers" id="i7A-PA-T1y"/>
+                        <segue destination="GFj-Vq-JEa" kind="relationship" relationship="viewControllers" id="zNN-jd-goR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c75-GO-00n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.297709923664122" y="3.5211267605633805"/>
+        </scene>
+        <!--YesNav-->
+        <scene sceneID="sRw-Tn-aec">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="enr-IJ-G1x" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="YesNav" image="circle" catalog="system" id="jVZ-CO-uei"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gCV-J2-NrW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="arI-eX-2q7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeC-GF-MsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="-680"/>
+        </scene>
+        <!--NoNav-->
+        <scene sceneID="VAe-Xz-Mgi">
+            <objects>
+                <viewController id="GFj-Vq-JEa" customClass="TabHomeViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TAE-BK-9bG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7ko-ZH-8qI">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YOa-Jc-Qb1">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="236.66666666666666"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0eE-L0-hDC">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="236.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Automatic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-Ho-Pwb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="39.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDl-m6-zPc">
+                                                        <rect key="frame" x="0.0" y="39.333333333333329" width="196.66666666666666" height="39.666666666666671"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="RJ6-fy-PcG" kind="show" id="zcr-Gz-8rm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-4y-wTk">
+                                                        <rect key="frame" x="0.0" y="79" width="196.66666666666666" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="RJ6-fy-PcG" kind="showDetail" id="4wV-Ng-5bK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfF-Mo-b3a">
+                                                        <rect key="frame" x="0.0" y="118.33333333333333" width="196.66666666666666" height="39.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="RJ6-fy-PcG" kind="presentation" id="gVL-oo-cAM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvJ-py-SxB">
+                                                        <rect key="frame" x="0.0" y="157.66666666666666" width="196.66666666666666" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="RJ6-fy-PcG" kind="presentation" modalPresentationStyle="fullScreen" id="hAf-xJ-Ylc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rac-bk-VUp">
+                                                        <rect key="frame" x="0.0" y="197.33333333333331" width="196.66666666666666" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="RJ6-fy-PcG" kind="presentation" modalPresentationStyle="currentContext" id="Aaz-RS-vu5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KZD-jN-fNt">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="236.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To OverFullScreen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-zS-40C">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="39.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2i-r4-4AL">
+                                                        <rect key="frame" x="0.0" y="39.333333333333329" width="196.33333333333334" height="39.666666666666671"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="nKl-cI-EVA" kind="show" id="2BF-Kr-p7V"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOg-vL-7Ge">
+                                                        <rect key="frame" x="0.0" y="79" width="196.33333333333334" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="nKl-cI-EVA" kind="showDetail" id="b9N-Ty-IIZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRG-KT-My5">
+                                                        <rect key="frame" x="0.0" y="118.33333333333333" width="196.33333333333334" height="39.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="nKl-cI-EVA" kind="presentation" id="EtI-Ju-ag8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laf-Tz-871">
+                                                        <rect key="frame" x="0.0" y="157.66666666666666" width="196.33333333333334" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="nKl-cI-EVA" kind="presentation" modalPresentationStyle="fullScreen" id="2Z1-9l-evb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9t-C3-o56">
+                                                        <rect key="frame" x="0.0" y="197.33333333333331" width="196.33333333333334" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="nKl-cI-EVA" kind="presentation" modalPresentationStyle="currentContext" id="ZDE-1I-YkK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0np-2V-sO9">
+                                        <rect key="frame" x="0.0" y="236.66666666666669" width="393" height="236.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Qmx-qO-U1P">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="236.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To OverCurrentContext" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh4-lk-VrC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="39.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHS-SU-sBG">
+                                                        <rect key="frame" x="0.0" y="39.333333333333314" width="196.66666666666666" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="wxz-AZ-NVz" kind="show" id="tOy-XM-Ffb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EI-Wh-dDs">
+                                                        <rect key="frame" x="0.0" y="79" width="196.66666666666666" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="wxz-AZ-NVz" kind="showDetail" id="MnI-fW-grz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSu-k0-vqM">
+                                                        <rect key="frame" x="0.0" y="118.3333333333333" width="196.66666666666666" height="39.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="wxz-AZ-NVz" kind="presentation" id="chB-J8-a2F"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2Y-Ct-6GX">
+                                                        <rect key="frame" x="0.0" y="157.66666666666663" width="196.66666666666666" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="wxz-AZ-NVz" kind="presentation" modalPresentationStyle="fullScreen" id="O7W-GI-EH4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iz-GB-ba4">
+                                                        <rect key="frame" x="0.0" y="197.33333333333331" width="196.66666666666666" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="wxz-AZ-NVz" kind="presentation" modalPresentationStyle="currentContext" id="lFe-Yq-UuW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gFY-le-5Ve">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="236.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Extra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHU-JN-nE9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="39.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-kF-jGL">
+                                                        <rect key="frame" x="0.0" y="39.333333333333314" width="196.33333333333334" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIh-ao-dn1">
+                                                        <rect key="frame" x="0.0" y="79" width="196.33333333333334" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdj-0b-U2s">
+                                                        <rect key="frame" x="0.0" y="118.3333333333333" width="196.33333333333334" height="39.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbv-xy-y0v">
+                                                        <rect key="frame" x="0.0" y="157.66666666666663" width="196.33333333333334" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-1G-tn1">
+                                                        <rect key="frame" x="0.0" y="197.33333333333331" width="196.33333333333334" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="y9g-Qb-Wpl">
+                                        <rect key="frame" x="0.0" y="473.33333333333343" width="393" height="236.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="edA-1Q-JL4">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="236.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To PageSheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-0m-Q1k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="39.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iu-yl-rDs">
+                                                        <rect key="frame" x="0.0" y="39.333333333333258" width="196.66666666666666" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="HbK-6z-Xnk" kind="show" id="rYJ-Ah-8Vt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="935-YA-Upj">
+                                                        <rect key="frame" x="0.0" y="79" width="196.66666666666666" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="HbK-6z-Xnk" kind="showDetail" id="bzx-Br-50J"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNb-eM-kPB">
+                                                        <rect key="frame" x="0.0" y="118.33333333333324" width="196.66666666666666" height="39.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="HbK-6z-Xnk" kind="presentation" id="itf-z0-4F5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgI-oZ-gzz">
+                                                        <rect key="frame" x="0.0" y="157.66666666666663" width="196.66666666666666" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="HbK-6z-Xnk" kind="presentation" modalPresentationStyle="fullScreen" id="eQG-sI-ztA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfN-3P-wwT">
+                                                        <rect key="frame" x="0.0" y="197.33333333333326" width="196.66666666666666" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="HbK-6z-Xnk" kind="presentation" modalPresentationStyle="currentContext" id="kMV-YT-gpF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WG3-uH-Aoh">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="236.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To FormSheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7w-Wz-7PQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="39.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urO-hS-iQ4">
+                                                        <rect key="frame" x="0.0" y="39.333333333333258" width="196.33333333333334" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show"/>
+                                                        <connections>
+                                                            <segue destination="2b5-9G-7Ls" kind="show" id="vjR-fm-hCo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTe-Ea-Pt0">
+                                                        <rect key="frame" x="0.0" y="79" width="196.33333333333334" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                                                        <connections>
+                                                            <segue destination="2b5-9G-7Ls" kind="showDetail" id="cuA-jx-Fiq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vf-a6-Hlk">
+                                                        <rect key="frame" x="0.0" y="118.33333333333324" width="196.33333333333334" height="39.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal automatic"/>
+                                                        <connections>
+                                                            <segue destination="2b5-9G-7Ls" kind="presentation" id="mEQ-ZG-Qxi"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c45-N9-yj1">
+                                                        <rect key="frame" x="0.0" y="157.66666666666663" width="196.33333333333334" height="39.666666666666657"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="modal fullscreen"/>
+                                                        <connections>
+                                                            <segue destination="2b5-9G-7Ls" kind="presentation" modalPresentationStyle="fullScreen" id="WCG-cG-Mkw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5z2-fd-9yE">
+                                                        <rect key="frame" x="0.0" y="197.33333333333326" width="196.33333333333334" height="39.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="current context"/>
+                                                        <connections>
+                                                            <segue destination="2b5-9G-7Ls" kind="presentation" modalPresentationStyle="currentContext" id="Rdm-3p-IWk"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ADR-zD-slc"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="ADR-zD-slc" firstAttribute="trailing" secondItem="7ko-ZH-8qI" secondAttribute="trailing" id="FiM-sZ-yQO"/>
+                            <constraint firstItem="ADR-zD-slc" firstAttribute="bottom" secondItem="7ko-ZH-8qI" secondAttribute="bottom" id="Gw0-Tf-oyJ"/>
+                            <constraint firstItem="7ko-ZH-8qI" firstAttribute="top" secondItem="ADR-zD-slc" secondAttribute="top" id="bIq-Jm-0kY"/>
+                            <constraint firstItem="7ko-ZH-8qI" firstAttribute="leading" secondItem="ADR-zD-slc" secondAttribute="leading" id="uUe-G5-7Qi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="NoNav" image="xmark.app" catalog="system" id="aej-q5-JXe"/>
+                    <navigationItem key="navigationItem" id="XsE-Yl-oEf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Le-d0-oVC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264.885496183206" y="858.45070422535218"/>
+        </scene>
+        <!--Nav Over Full Screen View Controller-->
+        <scene sceneID="Ydw-4s-z5Z">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="dGD-Zc-jFs" customClass="NavOverFullScreenViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kTU-ej-aMt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwb-bm-E37">
+                                <rect key="frame" x="116" y="343" width="161" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="ko7-c7-JA2" kind="unwind" unwindAction="unwindFromNavOverFullToNavHome:" id="wOC-bE-Uqf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rOD-d6-L2T"/>
+                        <color key="backgroundColor" red="0.67877163987063949" green="0.41747217347423676" blue="0.86078912019729614" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VgC-jp-jxf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zR-Nt-p8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ko7-c7-JA2" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3524" y="-680"/>
+        </scene>
+        <!--Nav Over Current Context View Controller-->
+        <scene sceneID="cbf-ki-SDD">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="Bfa-1E-EQI" customClass="NavOverCurrentContextViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mP1-WP-8Ef">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s24-ij-S3A">
+                                <rect key="frame" x="115" y="348" width="162" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="7kb-2L-TQo" kind="unwind" unwindAction="unwindFromNavOverCurrentToNavHome:" id="sGs-RH-eXR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VIX-YY-Lb2"/>
+                        <color key="backgroundColor" red="0.28584471121324068" green="0.5158535932758731" blue="0.86078912019729614" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zXk-8c-IsA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ect-CV-1AQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7kb-2L-TQo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3830" y="38"/>
+        </scene>
+        <!--Tab Automatic View Controller-->
+        <scene sceneID="9ol-SN-60c">
+            <objects>
+                <viewController id="RJ6-fy-PcG" customClass="TabAutomaticViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dQ2-cN-MvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUh-ht-IvT">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="S8M-C0-I3B" kind="unwind" unwindAction="unwindFromTabAutoToTabHome:" id="lul-bx-2Xm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kv0-S1-IIS"/>
+                        <color key="backgroundColor" red="1" green="0.57357778293633555" blue="0.83647756476796209" alpha="0.40434998109999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mv6-UI-kwd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9y-s5-8t8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="S8M-C0-I3B" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2456" y="191"/>
+        </scene>
+        <!--Tab Over Full Screen View Controller-->
+        <scene sceneID="l2I-m2-YnF">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="nKl-cI-EVA" customClass="TabOverFullScreenViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vgh-dM-jI1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFF-gz-Iuy">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="7dQ-St-bKe" kind="unwind" unwindAction="unwindFromTabOverFullToTabHome:" id="R4E-ga-wwz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oCK-kc-zQc"/>
+                        <color key="backgroundColor" red="1" green="0.61101742778762846" blue="0.35759333994614562" alpha="0.40434998109999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C3A-VZ-8ZG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxr-8X-91r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7dQ-St-bKe" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2456" y="858"/>
+        </scene>
+        <!--Tab Over Current Context View Controller-->
+        <scene sceneID="UqG-zv-EWP">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="wxz-AZ-NVz" customClass="TabOverCurrentContextViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PmV-dY-Pkk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-eW-AXP">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="ZXc-g6-qeQ" kind="unwind" unwindAction="unwindFromTabOverCurrentToTabHome:" id="lJD-St-bp2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qsz-jq-0xd"/>
+                        <color key="backgroundColor" red="1" green="0.37788604179369889" blue="0.32429511366252994" alpha="0.40434998109999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gnr-us-Gbn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPZ-gF-Tlh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZXc-g6-qeQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2456" y="1572"/>
+        </scene>
+        <!--Tab Page Sheet View Controller-->
+        <scene sceneID="MkS-a6-YC3">
+            <objects>
+                <viewController modalPresentationStyle="pageSheet" id="HbK-6z-Xnk" customClass="TabPageSheetViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Otf-L7-1pg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tac-45-gRq">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="4GL-Hg-38P" kind="unwind" unwindAction="unwindFromTapPageToTapHome:" id="bdB-nE-IhL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mXP-mU-uI6"/>
+                        <color key="backgroundColor" red="0.44043843228650825" green="1" blue="0.57864490088131637" alpha="0.40434998109999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qMq-Ry-d9c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHd-41-GyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4GL-Hg-38P" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3167" y="599"/>
+        </scene>
+        <!--Nav Page Sheet View Controller-->
+        <scene sceneID="maU-Y9-sKa">
+            <objects>
+                <viewController modalPresentationStyle="pageSheet" id="bKH-Cz-mgQ" customClass="NavPageSheetViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yd3-6j-mOW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wR-qo-ZJD">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="A2j-TN-xk5" kind="unwind" unwindAction="unwindFromNavPageToNavHome:" id="xAe-TS-dxx"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3rb-uO-FSu">
+                                <rect key="frame" x="76" y="137" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="sJr-z4-D3z" kind="embed" id="Cvh-Wh-BcA"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KDl-uR-Exi"/>
+                        <color key="backgroundColor" red="0.49022896831848306" green="0.74275977733072107" blue="1" alpha="0.40434998109999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G5W-vR-1Tp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJB-W0-yyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="A2j-TN-xk5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4337" y="-1122"/>
+        </scene>
+        <!--Nav Form Sheet View Controller-->
+        <scene sceneID="TO4-87-eHn">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="HaC-y0-Tmx" customClass="NavFormSheetViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="msV-dE-v6j">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEL-OS-3wF">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="Oet-tY-CfS" kind="unwind" unwindAction="unwindFromNavFormToNavHome:" id="Jel-Dt-wyF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xNS-AE-4U3"/>
+                        <color key="backgroundColor" red="0.68559876538818765" green="1" blue="0.7872003776566312" alpha="0.40434998109999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ULa-7P-r0X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Df4-6d-E1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Oet-tY-CfS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4376" y="-333"/>
+        </scene>
+        <!--Tab Form Sheet View Controller-->
+        <scene sceneID="2fe-0h-Lzh">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="2b5-9G-7Ls" customClass="TabFormSheetViewController" customModule="PresentationTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ec-Kl-oOL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPI-c6-nK3">
+                                <rect key="frame" x="105" y="341" width="182" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="SER-xG-WaE" kind="unwind" unwindAction="unwindFromTapFormToTapHome:" id="sfi-ua-1KJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QVQ-jc-71g"/>
+                        <color key="backgroundColor" red="1" green="0.90629780864990661" blue="0.62286652911959739" alpha="0.40434998109999998" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Btb-vs-jSU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuK-RZ-6za" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SER-xG-WaE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3166" y="1317"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ks1-vt-UND">
+            <objects>
+                <viewController id="sJr-z4-D3z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="spR-md-UQt">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="idX-41-jhe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIc-Et-gEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4988" y="-1244"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rdm-3p-IWk"/>
+        <segue reference="Dje-cc-ubE"/>
+        <segue reference="qty-Zy-Y8E"/>
+        <segue reference="kMV-YT-gpF"/>
+        <segue reference="lFe-Yq-UuW"/>
+        <segue reference="ZDE-1I-YkK"/>
+        <segue reference="Aaz-RS-vu5"/>
+        <segue reference="eo2-R3-c8o"/>
+        <segue reference="Nm0-OU-vGA"/>
+        <segue reference="IaM-Lv-NgZ"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="xmark.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
